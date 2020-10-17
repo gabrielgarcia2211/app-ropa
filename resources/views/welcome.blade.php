@@ -1,100 +1,63 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
 
-        <title>Laravel</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{asset('css/inicio/index.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOKO</title>
+    <link  rel="icon"   href="{{asset('img/tienda.png')}}" type="image/png" />
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<body>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<section class="banner">
 
-            .full-height {
-                height: 100vh;
-            }
+    <nav class="enc">
+        <ul class="vent">
+            <li class="view"><strong><a href="">Inicio</a></strong></li>
+            <li class="view"><strong><a href="">Productos</a></strong></li>
+            <li class="view"><strong><a href="">Contactanos</a></strong></li>
+            <li class="view"><strong><a href="">login</a></strong></li>
+        </ul>
+    </nav>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <div class="banner-cont">
+        <h1>Koko.swimwear</h1>
+    </div>
 
-            .position-ref {
-                position: relative;
-            }
+</section>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+<section class="cont_uno">
 
-            .content {
-                text-align: center;
-            }
+    <div class="cont_dos_img">
+        <img class="inicio_emp" src="{{asset('img/tres.jpg')}}">
+        <img class="inicio_emp" src="{{asset('img/uno.jpg')}}">
+    </div>
 
-            .title {
-                font-size: 84px;
-            }
+    <div style="padding: 10px"class="cont_dos_text">
+        <p class="nom_emp">koko.swimwear</p>
+        <p class="descripcion"> Somos una empresa creada para complacer a nuestro cliente, ofrecer
+            diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el
+            tipo de panty que desees (hilo, semi hilo, tanga, cachetero) en cualquier diseño de enterizo,
+            todo tipo de top dependiendo de la contextura de tu cuerpo, tenemos una alta gama de estampanos
+            de trajes de baño y pantalonetas ademas de ello tenemos a tu disposición enterizos para tu
+            preferencia,con la mas alta calidad al mejor precio, siempre tratando de tener modelaje que
+            este al corriente con lo último de la moda, para que así pueda desarrolar sus actividad
+            cotidianas luciendo su belleza.</p>
+    </div>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+</section>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+<section>
+    <div class="footer">
+        <p>2020 ©
+            All Rights Reserved . Desarrollado por KOKO</p>
+    </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+</section>
+</body>
 </html>

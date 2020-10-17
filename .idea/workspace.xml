@@ -10,7 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7067952-03f7-4107-b5c1-6908f6e46ea3" name="Default Changelist" comment="" />
+    <list default="true" id="e7067952-03f7-4107-b5c1-6908f6e46ea3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +32,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -149,6 +153,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ropa\public\css\inicio" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -165,6 +174,7 @@
       <updated>1602710943124</updated>
       <workItem from="1602710952147" duration="2799000" />
       <workItem from="1602945875152" duration="316000" />
+      <workItem from="1602959597564" duration="556000" />
     </task>
     <servers />
   </component>
@@ -181,5 +191,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
