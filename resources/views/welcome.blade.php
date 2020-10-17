@@ -19,7 +19,7 @@
             <li class="view"><strong><a href="">Inicio</a></strong></li>
             <li class="view"><strong><a href="">Productos</a></strong></li>
             <li class="view"><strong><a href="">Contactanos</a></strong></li>
-            <li class="view"><strong><a href="">login</a></strong></li>
+            <li class="view"><strong><a href="{{ route('login') }}">login</a></strong></li>
         </ul>
     </nav>
 

@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: all .2s ease-in-out;
-    background-image: url(../imagenes/f1.jpg);
+    background-image: url(/img/f1.jpg);
     opacity: .9;
     animation: baner_movible 28s infinite linear;
 }

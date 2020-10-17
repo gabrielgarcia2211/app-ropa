@@ -13,7 +13,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $fillable = [
-        'name', 'quienessomos' ,  'direccion', 'telefono',  'email', 'password', 'facebook', 'twitter', 'instagram', 'rol'
+        'name', 'quienessomos' ,  'direccion', 'telefono','username',  'email', 'password', 'facebook', 'twitter', 'instagram', 'rol'
     ];
 
     public function role(){
