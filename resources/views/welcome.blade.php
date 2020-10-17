@@ -16,8 +16,8 @@
 
     <nav class="enc">
         <ul class="vent">
-            <li class="view"><strong><a href="">Inicio</a></strong></li>
-            <li class="view"><strong><a href="">Productos</a></strong></li>
+            <li class="view"><strong><a href="{{ route('welcome') }}">Inicio</a></strong></li>
+            <li class="view"><strong><a href="{{ route('producto') }}">Productos</a></strong></li>
             <li class="view"><strong><a href="">Contactanos</a></strong></li>
             <li class="view"><strong><a href="{{ route('login') }}">login</a></strong></li>
         </ul>
