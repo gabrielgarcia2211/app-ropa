@@ -11,12 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7067952-03f7-4107-b5c1-6908f6e46ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/productos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/entrada/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/entrada/estilos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/f1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/intro-carousel/f1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/f2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/intro-carousel/f2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/f3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/intro-carousel/f3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/f4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/intro-carousel/f4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/tienda.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/tienda.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,11 +159,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ropa\public\assets\img\intro-carousel" />
+      <recent name="C:\laragon\www\ropa\public" />
       <recent name="C:\laragon\www\ropa\resources\lang" />
       <recent name="C:\laragon\www\ropa\public\css" />
       <recent name="C:\laragon\www\ropa\public\css\login" />
-      <recent name="C:\laragon\www\ropa\public\img" />
-      <recent name="C:\laragon\www\ropa\public\css\inicio" />
     </key>
   </component>
   <component name="RunManager">
@@ -182,6 +183,7 @@
       <workItem from="1602710952147" duration="2799000" />
       <workItem from="1602945875152" duration="316000" />
       <workItem from="1602959597564" duration="556000" />
+      <workItem from="1603123144192" duration="5565000" />
     </task>
     <servers />
   </component>
@@ -201,6 +203,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603126259945">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603126259945" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602965318318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
