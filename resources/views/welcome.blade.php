@@ -51,7 +51,7 @@
                 </nav><!-- .nav-menu -->
             </div>
         </div>
-
+        @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
     </div>
 </header><!-- End Header -->
 
@@ -298,32 +298,31 @@
 
             </div>
 
-            <div class="form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div style="" class="form">
+                <form action="{{ route('email') }}" method="post" style="padding:20px; -webkit-box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);">
+                    @csrf
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Porfavor Escribe un Nombre" />
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Porfavor Escribe un Nombre" required/>
                             <div class="validate"></div>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Porfavor Escribe un Email" />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Porfavor Escribe un Email" required/>
                             <div class="validate"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Porfavor Escribe un Asunto" />
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Porfavor Escribe un Asunto" required/>
                         <div class="validate"></div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Porfavor Escribe un Mensaje" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Porfavor Escribe un Mensaje" placeholder="Mensaje" required></textarea>
                         <div class="validate"></div>
                     </div>
-                    <div class="mb-3">
-                        <div class="loading">Cargando</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Tu Mensaje a Sido Enviado!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+                    <div class="text-center"><button id="correo" type="submit" class="btn btn-primary">Enviar Mensaje</button></div>
+
                 </form>
             </div>
 
@@ -357,6 +356,7 @@
 
     </div>
 </footer><!-- End Footer -->
+
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 

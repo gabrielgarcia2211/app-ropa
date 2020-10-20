@@ -11,11 +11,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7067952-03f7-4107-b5c1-6908f6e46ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/testMail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ropa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ropa.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/about-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/about-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/clients/client-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/clients/client-8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/intro-carousel/f1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/intro-carousel/f1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/intro-carousel/f2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/intro-carousel/f2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/intro-carousel/f3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/intro-carousel/f3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/intro-carousel/f4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/intro-carousel/f4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/app1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/app1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/app2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/app2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/app3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/app3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/card1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/card1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/card2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/card2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/card3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/card3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/escritorio1.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/escritorio1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/portfolio-details-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/portfolio-details-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/portfolio-details-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web1.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web2.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web3.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/portfolio/web4.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/portfolio/web4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/pruebas.png" beforeDir="false" afterPath="$PROJECT_DIR$/routes/img/pruebas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/quote-sign-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/quote-sign-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/sistemas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/team-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/team-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/team-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/team-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/testimonial-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/testimonial-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/testimonial-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/testimonial-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/testimonial-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +194,7 @@
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/realrashid/sweet-alert" />
     </include_path>
   </component>
   <component name="ProjectId" id="1isz9HmsSrK9skNDYb7vuEqjbF2" />
@@ -157,11 +211,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ropa\routes" />
       <recent name="C:\laragon\www\ropa\public\vendor" />
       <recent name="C:\laragon\www\ropa\public" />
       <recent name="C:\laragon\www\ropa\public\img" />
       <recent name="C:\laragon\www\ropa\public\css\fonts" />
-      <recent name="C:\laragon\www\ropa\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,7 +237,7 @@
       <workItem from="1602959597564" duration="556000" />
       <workItem from="1603123144192" duration="5605000" />
       <workItem from="1603138105626" duration="7079000" />
-      <workItem from="1603221722088" duration="1023000" />
+      <workItem from="1603221722088" duration="12382000" />
     </task>
     <servers />
   </component>

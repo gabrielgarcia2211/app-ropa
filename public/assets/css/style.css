@@ -1504,6 +1504,13 @@ section {
   font-size: 14px;
 }
 
+#footers {
+    background: #000;
+    padding: 0 0 30px 0;
+    color: #eee;
+    font-size: 14px;
+}
+
 #footer .footer-top {
   background: #111;
   padding: 60px 0 30px 0;

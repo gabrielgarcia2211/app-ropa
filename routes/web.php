@@ -23,4 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/producto', 'ProductoController@viewProducto')->name('producto');
+Route::post('/correo', 'MailController@getMail')->name('email');
 //Route::post('/cargaEstudiante', 'DirectorController@guardarEstudiante')->name('admin.carga');

@@ -70,7 +70,7 @@
                                 Iniciar Sesion
                             </span>
 
-                                <div class="entrada">
+                                <div style="margin-top: 10%"class="entrada">
                                     <label class="sr-only" for="inlineFormInputGroup"></label>
                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
@@ -100,13 +100,13 @@
                                 @endif
 
 
-                                <div style="margin-top: 10%" class="container-login100-form-btn">
+                                <div style="margin-top: 30%" class="container-login100-form-btn">
                                     <button type="submit" class="login100-form-btn">
                                         Ingresar
                                     </button>
                                 </div>
 
-                                <div class="text-center p-t-90">
+                                <div style="margin-top: 7%" class="text-center p-t-90">
                                     <a style="color:#1d2124" class="txt1" href="#">
                                         Forgot Password?
                                     </a>
@@ -116,37 +116,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-<!-- ======= Footer ======= -->
-<!-- <footer id="footer">
-    <div class="container">
-
-        <div class="row">
-            <div class="col">
-                <div class="copyright">
-                    &copy; Copyright <strong>koko.swimwear</strong>. All Rights Reserved
-                </div>
-            </div>
-            <div style="padding-top:30px " class="col">
-                <div class="container">
-                    <h6 style="display: inline-block;margin-right: 10%">Redes Sociales:</h6>
-                    <a style="margin-right: 10%"href="#" class="twitter"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a style="margin-right: 10%"href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a style="margin-right: 10%"href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a>
-                    <a style="margin-right: 10%"href="#" class="google-plus"><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a style="margin-right: 10%"href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</footer>End Footer -->
-
-
 
 
 <!-- Vendor JS Files -->
