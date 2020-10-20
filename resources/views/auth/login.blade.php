@@ -1,44 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{asset('css/login/login.css')}}">
-    <link rel="stylesheet" href="{{asset('css/fonts.css')}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="icon"   href="{{asset('img/tienda.png')}}" type="image/png" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Koko</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/tienda.png" rel="icon">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+
     <link href="{{asset('fontawesome/css/all.css')}}" rel="stylesheet"> <!--load all styles -->
-    <title>Inicio sesión</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-<body>
-<section class="fondo_principal">
-    <article class="fondo_dos">
-        <img src="{{asset('img/women.jpg')}}" alt="user">
-        <h3 class="inicio_titulo">Iniciar Sesión</h3>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+<body style="background: #fffbdb">
 
-            <div class="entrada"><i style="padding: 10px;" class="fas fa-user"></i><input class="inp form-control {{ $errors->has('login') ? ' is-invalid' : '' }}" value="{{ old('login') }}" type="login" name="login"  placeholder="usuario o correo"></div>
-            @if ($errors->has('login'))
-                <span style="padding: 10px;display: block" class="invalid-feedback" role="alert">
-                        <strong style="color: #d6d8d9">{{ $errors->first('login') }}</strong>
-                        </span>
-            @endif
+<!-- ======= Header ======= -->
+<header style="padding: 12px 5px;background: #1d68a7;" id="header" class="fixed-top header-transparent">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-11 d-flex align-items-center">
+                <h1 class="logo mr-auto"><a href="">koko.swimwear <img src="img/logo.jpeg" alt=""></a></h1>
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li ><a href="{{ route('welcome') }}">Home</a></li>
+                        <li class="active"><a href="{{ route('login') }}">Inicio Sesion</a></li>
+                    </ul>
+                </nav><!-- .nav-menu -->
+            </div>
+        </div>
+
+    </div>
+</header><!-- End Header -->
 
 
-            <div class="entrada"><i style="padding: 10px;" class="fas fa-key"></i><input class="inp form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" value="{{ old('password') }}" type="password" name="password"  placeholder="contraseña"></div>
-            @if ($errors->has('password'))
-                <span style="padding: 10px;display: block" class="invalid-feedback" role="alert">
-                        <strong style="color: #d6d8d9">{{ $errors->first('password') }}</strong>
-                        </span>
-            @endif
+    <div style="margin-top:80px "class="container-fluid">
+        <div class="limiter">
+            <div class="container-login100" style="background-image: url('img/fondo_3.jpg');">
+                <div class="wrap-login100">
 
-            <input class="boton_inicio" type="submit" name="inicio" value="Ingresar">
-        </form>
+                    <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+                        @csrf
 
-    </article>
-</section>
+                            <span class="login100-form-logo">
+                                <img src="img/women.jpg" alt="">
+                            </span>
+
+                                <span class="login100-form-title p-b-34 p-t-27">
+                                Iniciar Sesion
+                            </span>
+
+                                <div class="entrada">
+                                    <label class="sr-only" for="inlineFormInputGroup"></label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                        </div>
+                                        <input id="inlineFormInputGroup" class="inp form-control {{ $errors->has('login') ? ' is-invalid' : '' }}" value="{{ old('login') }}" type="login" name="login"  placeholder="usuario o correo"></div>
+                                    </div>
+                                    @if ($errors->has('login'))
+                                        <span style="padding: 10px;display: block" class="invalid-feedback" role="alert">
+                                            <strong style="color: #c51f1a">{{ $errors->first('login') }}</strong>
+                                        </span>
+                                    @endif
+
+
+                                <div style="margin-top: 5%"class="entrada">
+                                    <label class="sr-only" for="inlineFormInputGroup"></label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-key"></i></div>
+                                        </div>
+                                        <input id="inlineFormInputGroup" class="inp form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" value="{{ old('password') }}" type="password" name="password"  placeholder="contraseña"></div>
+                                    </div>
+                                @if ($errors->has('password'))
+                                    <span style="padding: 10px;display: block" class="invalid-feedback" role="alert">
+                                        <strong style="color: #c51f1a">{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+
+
+                                <div style="margin-top: 10%" class="container-login100-form-btn">
+                                    <button type="submit" class="login100-form-btn">
+                                        Ingresar
+                                    </button>
+                                </div>
+
+                                <div class="text-center p-t-90">
+                                    <a style="color:#1d2124" class="txt1" href="#">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- ======= Footer ======= -->
+<!-- <footer id="footer">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="copyright">
+                    &copy; Copyright <strong>koko.swimwear</strong>. All Rights Reserved
+                </div>
+            </div>
+            <div style="padding-top:30px " class="col">
+                <div class="container">
+                    <h6 style="display: inline-block;margin-right: 10%">Redes Sociales:</h6>
+                    <a style="margin-right: 10%"href="#" class="twitter"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a style="margin-right: 10%"href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a style="margin-right: 10%"href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a style="margin-right: 10%"href="#" class="google-plus"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a style="margin-right: 10%"href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</footer>End Footer -->
+
+
+
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="assets/vendor/counterup/counterup.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+
+<script src="assets/js/main.js"></script>
+
 </body>
-</html>
 
+</html>

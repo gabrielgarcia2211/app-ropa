@@ -41,7 +41,8 @@
                 <h1 class="logo mr-auto"><a href="">koko.swimwear <img src="img/logo.jpeg" alt=""></a></h1>
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="">Inicio</a></li>
+                        <li class="active"><a href="{{ route('welcome') }}">Home</a></li>
+                        <li><a href="{{ route('login') }}">Inicio Sesion</a></li>
                         <li><a href="#about">Quienes Somos</a></li>
                         <li><a href="#services">Producto</a></li>
                         <li><a href="#contact">Contactanos</a></li>
@@ -145,24 +146,20 @@
                 <p>Ofrecemos diversos tipos de ropa con diseño de tu preferencia y a tu estilo.</p>
             </header>
 
-            <div class="row">
-
-                <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><i class="icon ion-ios-folder"></i></div>
-                    <h4 class="title">Enterizos</h4>
+            <div class="container-sm" style="width:60%">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                Tipos de Ropa
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">Enterizos</a>
+                            <a href="#" class="list-group-item list-group-item-action">Conjuntos de Pareja</a>
+                            <a href="#" class="list-group-item list-group-item-action">Bikinis</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><i class="fa fa-android"></i></div>
-                    <h4 class="title">Bikinis</h4>
-                </div>
-                <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><i class="fa fa-database"></i></div>
-                    <h4 class="title">Trajes de Baño Parejas</h4>
-                </div>
-
-
             </div>
-
         </div>
     </section><!-- End Services Section -->
 
