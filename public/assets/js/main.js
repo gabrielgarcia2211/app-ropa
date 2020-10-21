@@ -6,10 +6,100 @@ function loadAgregar() {
             document.getElementById("contenedor").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "/producto", true);
+    xhttp.open("GET", "/producto/agregar", true);
     xhttp.send();
+
 }
 
+function loadCategoria() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("contenedor").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "/categoria/agregar", true);
+    xhttp.send();
+
+}
+
+function loadMarca() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("contenedor").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "/marca/agregar", true);
+    xhttp.send();
+
+}
+
+function guardarCategoria(evt){
+    evt.preventDefault();
+    var url   = $("#formularioCategoria").attr('action');
+    var parametros = new FormData($("#formularioCategoria")[0]);
+    var descripcion = $("#descripcion").val();
+    var estado = $("#estado").val();
+    if(estado=="" || descripcion==""){
+        $("#resultado").show();
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: parametros,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            setTimeout(function(){  location.reload(); }, 1900);
+
+        },
+        error: function (r) {
+            alert('daño');
+        },
+        complete : function(jqXHR, status) {
+            swal({
+                title: "Categoria guardada",
+                text: "nueva categoria agregada",
+                icon: "success",
+            });
+        }
+    });
+}
+
+function guardarMarca(evt){
+    evt.preventDefault();
+    var url   = $("#formularioMarca").attr('action');
+    var parametros = new FormData($("#formularioMarca")[0]);
+    var descripcion = $("#descripcionM").val();
+    var  nombre= $("#estadoM").val();
+    if(nombre=="" || descripcion==""){
+        $("#resultadoM").show();
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: parametros,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            setTimeout(function(){  location.reload(); }, 1900);
+
+        },
+        error: function (r) {
+            alert('daño');
+        },
+        complete : function(jqXHR, status) {
+            swal({
+                title: "Marca guardada",
+                text: "nueva marca agregada",
+                icon: "success",
+            });
+        }
+    });
+}
 
 (function($) {
   "use strict";

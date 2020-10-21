@@ -1,4 +1,4 @@
-<div class="card" style="width: 30rem; margin-bottom: 20%">
+<div class="card" style="width: 30rem; margin-bottom: 24%">
     <div class="card-body">
         <h5 class="card-title">Agregar Producto</h5>
         <form>
@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripcion</label>
-                <input type="text" class="form-control" id="descripcion" name="descripcion" >
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="detalle">Detalle</label>

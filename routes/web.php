@@ -22,6 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/producto', 'ProductoController@viewProducto')->name('producto');
+Route::get('/producto/agregar', 'ProductoController@viewProducto')->name('producto');
+Route::get('/categoria/agregar', 'CategoriaController@viewCategoria')->name('categoria');
+Route::get('/marca/agregar', 'MarcaController@viewMarca')->name('marca');
+
+
 Route::post('/correo', 'MailController@getMail')->name('email');
+Route::post('/categoria/agregar', 'CategoriaController@addCategoria')->name('categoria');
+Route::post('/marca/agregar', 'MarcaController@addMarca')->name('marca');
 //Route::post('/cargaEstudiante', 'DirectorController@guardarEstudiante')->name('admin.carga');

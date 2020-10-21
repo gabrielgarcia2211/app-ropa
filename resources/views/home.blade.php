@@ -92,20 +92,20 @@
                             <div class="row">
                                 <div class="col-6">
                                     <a href="" class="card-link">Categorias</a>
-                                    <button type="button" class="btn btn-secondary" style="width: 80%">Agregar</button>
+                                    <button onclick="loadCategoria()" type="button" class="btn btn-secondary" style="width: 80%">Agregar</button>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="card-link">Marcas</a>
-                                    <button type="button" class="btn btn-secondary" style="width: 80%">Agregar</button>
+                                    <a href="" class="card-link">Marcas</a>
+                                    <button onclick="loadMarca()" type="button" class="btn btn-secondary" style="width: 80%">Agregar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <div style="margin-left: 10%" class="col-sm">
+                    <div style="margin-left: 7%" class="col-sm">
                         <div class="container">
                             <div id="contenedor">
-                                <div class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
+                                <div id="mayor" class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
                                     <img src="{{asset('img/logo.jpeg')}}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <p class="card-text">Una empresa con estilo...</p>
@@ -117,7 +117,7 @@
             </div>
         </div>
 </div>
-
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 <!-- Footer -->
 <footer style="background-color: black; bottom: 0px ; position: fixed; width: 100%"bclass="page-footer font-small blue row">
     <!-- Copyright -->
@@ -130,6 +130,7 @@
 
 
 <!-- Vendor JS Files -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
