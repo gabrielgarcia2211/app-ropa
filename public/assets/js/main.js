@@ -8,6 +8,7 @@ function loadAgregar() {
     };
     xhttp.open("GET", "/producto/agregar", true);
     xhttp.send();
+    $("#principal").css("margin-left", "8%");
 
 }
 
@@ -20,6 +21,7 @@ function loadCategoria() {
     };
     xhttp.open("GET", "/categoria/agregar", true);
     xhttp.send();
+    $("#principal").css("margin-left", "8%");
 
 }
 
@@ -32,6 +34,36 @@ function loadMarca() {
     };
     xhttp.open("GET", "/marca/agregar", true);
     xhttp.send();
+    $("#principal").css("margin-left", "8%");
+
+}
+
+
+function loadInformacion() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("contenedor").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "/empresa/agregar", true);
+    xhttp.send();
+    $("#principal").css("margin-left", "8%");
+
+}
+
+function loadLista() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("contenedor").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "/producto/lista", true);
+    xhttp.send();
+    $("#principal").css("margin-left", "3%");
+
+
 
 }
 
@@ -52,7 +84,7 @@ function guardarCategoria(evt){
         contentType: false,
         processData: false,
         success: function (data) {
-            setTimeout(function(){  location.reload(); }, 1900);
+            setTimeout(function(){  location.reload(); }, 1700);
 
         },
         error: function (r) {
@@ -85,7 +117,7 @@ function guardarMarca(evt){
         contentType: false,
         processData: false,
         success: function (data) {
-            setTimeout(function(){  location.reload(); }, 1900);
+            setTimeout(function(){  location.reload(); }, 1700);
 
         },
         error: function (r) {
@@ -101,8 +133,29 @@ function guardarMarca(evt){
     });
 }
 
+function eliminar(data){
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/producto/eliminar',
+        data: { search:data },
+        type: 'POST',
+        success:function(response) {
+            loadLista();
+        }
+    });
+}
+
+
+
+
+
+
 (function($) {
   "use strict";
+
+
 
   // Preloader
   $(window).on('load', function() {

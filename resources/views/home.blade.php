@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Home Koko</title>
     <meta content="" name="description">
@@ -65,12 +66,12 @@
 
     </div>
 </header><!-- End Header -->
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
 
-<div style="margin-top:80px "class="container-fluid">
-        <div class="container" style="margin-top: 8%">
+        <div  class="container-fluid" style="margin-top: 8%">
             <div class="row">
-                <div class="col-sm">
+                <div id="principal" class="col-sm" style="margin-left: 8%">
                     <div class="card" style="width: 30rem;">
                         <div class="card-body">
                             <h5 class="card-title">Hola, ¿Que deseas hacer?</h5>
@@ -80,13 +81,13 @@
                                 <div class="col-6">
                                     <a href="" class="card-link">Productos</a>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button  type="button" class="btn btn-info">Listar</button>
+                                        <button onclick="loadLista()" type="button" class="btn btn-info">Listar</button>
                                         <button onclick="loadAgregar()" type="button" class="btn btn-secondary">Agregar</button>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="card-link">Informacion empresa</a>
-                                    <button type="button" class="btn btn-success">Actualizar Informacion</button>
+                                    <a href="" class="card-link">Informacion empresa</a>
+                                    <button onclick="loadInformacion()" type="button" class="btn btn-success">Actualizar Informacion</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -102,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                    <div style="margin-left: 7%" class="col-sm">
+                    <div class="col-sm">
                         <div class="container">
                             <div id="contenedor">
                                 <div id="mayor" class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
@@ -116,8 +117,7 @@
                      </div>
             </div>
         </div>
-</div>
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
 <!-- Footer -->
 <footer style="background-color: black; bottom: 0px ; position: fixed; width: 100%"bclass="page-footer font-small blue row">
     <!-- Copyright -->
@@ -129,7 +129,8 @@
 <!-- Footer -->
 
 
-<!-- Vendor JS Files -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

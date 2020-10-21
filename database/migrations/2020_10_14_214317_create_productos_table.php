@@ -22,6 +22,7 @@ class CreateProductosTable extends Migration
             $table->string('valor');
             $table->string('palabraclave');
             $table->string('estado');
+            $table->string('ruta');
             $table->integer('categoria_id');
             $table->integer('marca_id');
             $table->foreign('categoria_id')

@@ -151,7 +151,7 @@
                     <div class="col-lg-12 col-md-12 box" data-aos="fade-up" data-aos-delay="100">
                         <div class="list-group">
                             <a href="#" class="list-group-item list-group-item-action active">
-                                Tipos de Ropa
+                                Categoria de Ropa
                             </a>
                             <a href="#" class="list-group-item list-group-item-action">Enterizos</a>
                             <a href="#" class="list-group-item list-group-item-action">Conjuntos de Pareja</a>
