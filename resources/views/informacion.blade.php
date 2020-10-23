@@ -9,7 +9,7 @@
             </div>
             <div class="form-group">
                 <label for="somos">¿Quienes somos?</label>
-                <textarea class="form-control" id="somos" name="somos" rows="3" value="{{$dataEmpresa[0]->quienessomos}}"></textarea>
+                <textarea class="form-control" id="somos" name="somos" rows="3" maxlength="255">{{$dataEmpresa[0]->quienessomos}}</textarea>
             </div>
             <div class="form-group">
                 <label for="direccion">Direccion</label>

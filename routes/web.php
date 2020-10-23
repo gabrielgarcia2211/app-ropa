@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+
+
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Auth::routes();
 
@@ -35,5 +35,7 @@ Route::post('/marca/agregar', 'MarcaController@addMarca')->name('marca');
 Route::post('/empresa/agregar', 'EmpresaController@updateEmpresa')->name('empresa');
 Route::post('/producto/agregar', 'ProductoController@addProducto')->name('producto');
 Route::post('/producto/eliminar', 'ProductoController@deleteProducto')->name('productoEliminar');
-Route::post('/producto/editar/{id}', 'ProductoController@editProducto')->name('productoEditar');
+Route::post('/producto/vieweditar/{id}', 'ProductoController@viewEditProducto')->name('productoviewEditar');
+Route::post('/producto/editar', 'ProductoController@editProducto')->name('productoEditar');
+Route::post('/producto/filtro', 'WelcomeController@listProducto')->name('welcome');
 //Route::post('/cargaEstudiante', 'DirectorController@guardarEstudiante')->name('admin.carga');

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Koko</title>
     <meta content="" name="description">
@@ -125,14 +126,7 @@
 
             <header class="section-header">
                 <h3>Quienes Somos</h3>
-                <p style="text-align: justify">Somos una empresa creada para complacer a nuestro cliente, ofrecer
-                    diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el
-                    tipo de panty que desees (hilo, semi hilo, tanga, cachetero) en cualquier diseño de enterizo,
-                    todo tipo de top dependiendo de la contextura de tu cuerpo, tenemos una alta gama de estampanos
-                    de trajes de baño y pantalonetas ademas de ello tenemos a tu disposición enterizos para tu
-                    preferencia,con la mas alta calidad al mejor precio, siempre tratando de tener modelaje que
-                    este al corriente con lo último de la moda, para que así pueda desarrolar sus actividad
-                    cotidianas luciendo su belleza.</p>
+                <p style="text-align: center">{{$dataEmpresa[0]->quienessomos}}</p>
             </header>
         </div>
     </section><!-- End About Us Section -->
@@ -149,14 +143,24 @@
             <div class="container-sm" style="width:60%">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action active">
-                                Categoria de Ropa
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">Enterizos</a>
-                            <a href="#" class="list-group-item list-group-item-action">Conjuntos de Pareja</a>
-                            <a href="#" class="list-group-item list-group-item-action">Bikinis</a>
-                        </div>
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th style="text-align: center" scope="col">Categoria de Ropa</th>
+                                <th style="text-align: center" scope="col">Estado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @if(!empty($dataCategoria))
+                                @foreach($dataCategoria as $tipo)
+                                    <tr>
+                                        <th cope="row">{{$tipo->descripcion}}</th>
+                                        <td >{{$tipo->estado}}</td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -169,91 +173,28 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h3 class="section-title">Algunos Productos</h3>
+                <h3 class="section-title">Algunos Productos  <img style="display: none" id="carga" src="{{asset('assets/img/carga.gif')}}" alt="Funny image"></h3>
+
             </header>
 
-            <div class="row" data-aos="fade-up" data-aos-delay="100"">
-            <div class=" col-lg-12">
-                <ul id="portfolio-flters">
-                    <li data-filter="*" class="filter-active">Todos</li>
-                    <li data-filter=".filter-app">Desktop</li>
-                    <li data-filter=".filter-web">Web</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="assets/img/portfolio/escritorio1.png" class="img-fluid" alt="">
-                        <a href="assets/img/portfolio/escritorio1.png" class="link-preview venobox" data-gall="portfolioGallery" title="App 1"><i class="ion ion-eye"></i></a>
-                    </figure>
-
-                    <div class="portfolio-info">
-                        <h4><a href="portfolio-details.html">Comiditas</a></h4>
-                        <p>Sistema de comidas a domicilio</p>
-                    </div>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class=" col-lg-12">
+                    <ul id="portfolio-flters">
+                        <li onclick="tomarId('no')"  data-filter="*" class="filter-active">Todos</li>
+                        @if(!empty($dataCategoria))
+                            @foreach($dataCategoria as $tipo)
+                                <li onclick="tomarId({{$tipo->id}})" data-filter=".filter-{{str_replace(' ', '', $tipo->id)}}">{{$tipo->descripcion}}</li>
+                            @endforeach
+                        @endif
+                    </ul>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="assets/img/portfolio/web1.png" class="img-fluid" alt="">
-                        <a href="assets/img/portfolio/web1.png" class="link-preview venobox" data-gall="portfolioGallery" title="Web 3"><i class="ion ion-eye"></i></a>
-                    </figure>
+            <div id="data" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+               <div class="row">
 
-                    <div class="portfolio-info">
-                        <h4><a href="portfolio-details.html">Secure Pendrive</a></h4>
-                        <p>Sistema de seguridad para memorias</p>
-                    </div>
-                </div>
+               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="assets/img/portfolio/web2.png" class="img-fluid" alt="">
-                        <a href="assets/img/portfolio/web2.png" class="link-preview venobox" data-gall="portfolioGallery" title="Web 2"><i class="ion ion-eye"></i></a>
-                    </figure>
-
-                    <div class="portfolio-info">
-                        <h4><a href="portfolio-details.html">Farmacia Center</a></h4>
-                        <p>Ordena tus medicamentos</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="assets/img/portfolio/web4.png" class="img-fluid" alt="">
-                        <a href="assets/img/portfolio/web4.png" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
-                    </figure>
-
-                    <div class="portfolio-info">
-                        <h4><a href="portfolio-details.html">Red Social</a></h4>
-                        <p>Comparte fotos con tus amigos</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <figure>
-                        <img src="assets/img/portfolio/web3.png" class="img-fluid" alt="">
-                        <a href="assets/img/portfolio/web3.png" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
-                    </figure>
-
-                    <div class="portfolio-info">
-                        <h4><a href="portfolio-details.html">Mundial</a></h4>
-                        <p>Datos sobre el mundial 2018</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
 
@@ -270,7 +211,6 @@
             </div>
 
             <div class="row contact-info">
-
                 <div class="col-md-4">
                     <div class="contact-email">
                         <i class="ion-social-whatsapp-outline"></i>
@@ -278,7 +218,6 @@
                         <p><a target="_blank" href="https://api.whatsapp.com/send?phone=57320452172">Link Chat</a></p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="contact-phone">
                         <i class="ion-ios-telephone-outline"></i>
@@ -287,7 +226,6 @@
 
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="contact-email">
                         <i class="ion-ios-email-outline"></i>

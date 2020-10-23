@@ -75,7 +75,7 @@
                     <div class="card" style="width: 30rem;">
                         <div class="card-body">
                             <h5 class="card-title">Hola, ¿Que deseas hacer?</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Acciones</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Acciones<img id="carga"  style="display: none;padding: 5px" src="{{asset('assets/img/carga.gif')}}" alt="Funny image"></h6>
                             <p class="card-text">Selecciona la opcion que deseas realizar</p>
                             <div class="row">
                                 <div class="col-6">
@@ -102,6 +102,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                     <div class="col-sm">
                         <div class="container">

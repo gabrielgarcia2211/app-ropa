@@ -1,8 +1,8 @@
 
-    <table class="table table-sm" style=" position:absolute; left:-18%; padding: 8px;background: #ffffff;box-shadow: 10px 3px 31px -5px rgba(0,0,0,0.75);" >
+    <table class="table table-responsive-xl" style=" position:absolute; left:-18%; padding: 8px;background: #ffffff;box-shadow: 10px 3px 31px -5px rgba(0,0,0,0.75);" >
         <thead class="bg-warning">
-        <tr>
-            <th style="padding: 10px" scope="col">Referencia</th>
+        <tr class="something">
+            <th style="padding: 10px;" scope="col">Referencia</th>
             <th style="padding: 10px"scope="col">Nombre</th>
             <th style="padding: 10px"scope="col">Detalle</th>
             <th style="padding: 10px"scope="col">Valor</th>
@@ -22,7 +22,7 @@
                     <td style="padding: 10px">{{$tipo->valor}}</td>
                     <td style="padding: 10px">{{$tipo->palabraclave}}</td>
                     <td style="padding: 10px">{{$tipo->estado}}</td>
-                    <td><form action="{{  route('productoEditar', [$tipo->id]) }}" method="POST">
+                    <td><form action="{{  route('productoviewEditar', [$tipo->id]) }}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-primary">Editar</button>
                     </form></td>

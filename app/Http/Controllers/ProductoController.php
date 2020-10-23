@@ -34,7 +34,14 @@ class ProductoController extends Controller
         $files = $request->file('imagen');
         $id =$request->input('referencia');
 
-        if(Storage::putFileAs('/public/'. $id . '/' , $files, $files->getClientOriginalName() )){
+        $maxId = Producto::max('id');
+        if(!isset($maxId)){
+            $maxId = 1;
+        }else{
+            $maxId = $maxId +1;
+        }
+
+        if(Storage::putFileAs('/public/'. $maxId . '/' , $files, $files->getClientOriginalName() )){
             $producto = new Producto();
             $producto->referencia = $id;
             $producto->nombre = $request->input('nombre');
@@ -55,11 +62,42 @@ class ProductoController extends Controller
     public function deleteProducto(Request $request){
         $dato = $request->input('search');
         $flight = Producto::find($dato);
+        $files = $flight->ruta;
+        Storage::deleteDirectory('/public/'. $dato);
         $flight->delete();
     }
 
-    public function editProducto($id){
-        dd($id);
+    public function viewEditProducto($id, Request $request){
+
+        $producto = Producto::find($id);
+        $data  = DB::select('SELECT descripcion ,estado, id FROM categorias ');
+        $dataM  = DB::select('SELECT descripcion ,nombre, id FROM marcas ');
+        $request->session()->put('key', $id);
+        return view('editar')->with(compact('producto', 'data', 'dataM'));
+    }
+
+    public function editProducto(Request $request){
+        $files = $request->file('imagen');
+        $id = $request->session()->get('key');
+        $producto = Producto::find($id);
+        Storage::deleteDirectory('/public/'. $id);
+        if(Storage::putFileAs('/public/'. $id . '/' , $files, $files->getClientOriginalName() )){
+
+            $producto->nombre = $request->input('nombre');
+            $producto->descripcioncorta = $request->input('descripcion');
+            $producto->detalle = $request->input('detalle');
+            $producto->valor = $request->input('valor');
+            $producto->palabraclave = $request->input('palabra');
+            $producto->estado = $request->input('estado');
+            $producto->categoria_id = $request->input('valor');
+            $producto->marca_id = $request->input('valorM');
+            $producto->ruta = $files->getClientOriginalName();
+            $producto->save();
+            Alert::success('Producto editado', 'Satisfactoriamente');
+            $request->session()->forget('key');
+            return redirect('home');
+        }
+
     }
 
 

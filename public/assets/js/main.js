@@ -1,5 +1,6 @@
 
 function loadAgregar() {
+    $("#carga").show();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -9,10 +10,12 @@ function loadAgregar() {
     xhttp.open("GET", "/producto/agregar", true);
     xhttp.send();
     $("#principal").css("margin-left", "8%");
+    setTimeout(function(){   $("#carga").hide(); }, 1300);
 
 }
 
 function loadCategoria() {
+    $("#carga").show();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -22,10 +25,12 @@ function loadCategoria() {
     xhttp.open("GET", "/categoria/agregar", true);
     xhttp.send();
     $("#principal").css("margin-left", "8%");
+    setTimeout(function(){   $("#carga").hide(); }, 1300);
 
 }
 
 function loadMarca() {
+    $("#carga").show();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -35,11 +40,13 @@ function loadMarca() {
     xhttp.open("GET", "/marca/agregar", true);
     xhttp.send();
     $("#principal").css("margin-left", "8%");
+    setTimeout(function(){   $("#carga").hide(); }, 1300);
 
 }
 
 
 function loadInformacion() {
+    $("#carga").show();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -49,10 +56,12 @@ function loadInformacion() {
     xhttp.open("GET", "/empresa/agregar", true);
     xhttp.send();
     $("#principal").css("margin-left", "8%");
+    setTimeout(function(){   $("#carga").hide(); }, 1300);
 
 }
 
 function loadLista() {
+    $("#carga").show();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -62,6 +71,7 @@ function loadLista() {
     xhttp.open("GET", "/producto/lista", true);
     xhttp.send();
     $("#principal").css("margin-left", "3%");
+    setTimeout(function(){   $("#carga").hide(); }, 1300);
 
 
 
@@ -83,7 +93,11 @@ function guardarCategoria(evt){
         data: parametros,
         contentType: false,
         processData: false,
+        beforeSend : function(){
+            $("#carga").show();
+        },
         success: function (data) {
+            $("#carga").hide();
             setTimeout(function(){  location.reload(); }, 1700);
 
         },
@@ -116,7 +130,11 @@ function guardarMarca(evt){
         data: parametros,
         contentType: false,
         processData: false,
+        beforeSend : function(){
+            $("#carga").show();
+        },
         success: function (data) {
+            $("#carga").hide();
             setTimeout(function(){  location.reload(); }, 1700);
 
         },
@@ -141,12 +159,56 @@ function eliminar(data){
         url: '/producto/eliminar',
         data: { search:data },
         type: 'POST',
+        beforeSend : function(){
+            $("#carga").show();
+        },
         success:function(response) {
+            $("#carga").hide();
             loadLista();
         }
     });
 }
 
+
+function tomarId(id){
+    $('#data').html("");
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/producto/filtro',
+        data: { search:id },
+        type: 'POST',
+        beforeSend : function(){
+            $("#carga").show();
+        },
+        success:function(response) {
+            if(response!=0){
+                let tasks = JSON.parse(response);
+                let template = '';
+                tasks.forEach(ta => {
+                    template += `<div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="storage/${ta.id}/${ta.ruta}" alt="Card image cap">
+                          <div class="card-body">
+                            <p class="card-text">${ta.descripcion}</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>`
+                });
+                $('#data').html(template);
+            }
+
+        },
+        complete:function (){
+            $("#carga").hide();
+        }
+    });
+
+
+}
 
 
 
@@ -154,10 +216,9 @@ function eliminar(data){
 
 (function($) {
   "use strict";
+    tomarId('no');
 
-
-
-  // Preloader
+    // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
@@ -305,21 +366,18 @@ function eliminar(data){
     time: 1000
   });
 
-  // Porfolio isotope and filter
-  var portfolioIsotope = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-item',
-    layoutMode: 'fitRows'
-  });
 
-  $('#portfolio-flters li').on('click', function() {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
 
-    portfolioIsotope.isotope({
-      filter: $(this).data('filter')
+
+    $('#portfolio-flters li').on('click', function() {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+        aos_init();
     });
-    aos_init();
-  });
+
+
+
+
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {
@@ -363,7 +421,7 @@ function eliminar(data){
   // Init AOS
   function aos_init() {
     AOS.init({
-      duration: 1000,
+      duration: 900,
       once: true
     });
   }

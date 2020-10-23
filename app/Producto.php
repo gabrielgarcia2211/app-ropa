@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
+
+    protected $primaryKey = 'id';
     protected $table = 'productos';
     public $timestamps = false;
 
-    protected $fillable = ['referencia', 'nombre','descripcioncorta', 'detalle','valor', 'palabraclave','estado', 'categoria_id','marca_id', 'categoria_id'];
+    protected $fillable = ['id', 'referencia', 'nombre','descripcioncorta', 'detalle','valor', 'palabraclave','estado', 'categoria_id','marca_id','ruta'];
 
     public function marca(){
         return $this->hasMany(Marca::class,'id','marca_id');
