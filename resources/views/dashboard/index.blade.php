@@ -68,7 +68,7 @@
                             <tr style="background: #10707f" >
                                 <th><form action="{{route('welcomeTotalA', [$p->id, 'no'])}}" method="POST">
                                     @csrf
-                                    <button type="submit" style="padding: 6px;color: #ffffff">{{$p->descripcion}}</button>
+                                    <button type="submit" style="padding: 6px;color: #ffffff; width: 100%">{{$p->descripcion}}</button>
                                 </form>
                                 </th>
                             </tr>
@@ -98,10 +98,15 @@
             </div>
             <div class="col-sm-9" style="position: relative;right: -25px">
                 <blockquote class="blockquote text-left">
-                    <p style="font-size: 24px" class="mb-0">Variedad y Moda</p>
+                    <p style="font-size: 24px" class="mb-0">Variedad y Moda </p>
                 </blockquote>
-                @if(!$dataProducto->isEmpty())
-                    <div class="row justify-content-center" style="margin-top: 3%">
+                @if(isset($dataProducto))
+                @if($dataProducto->count()!=0)
+                    <div class="">
+                        <input id="buscador" onkeyup="capturar()" style="display: inline-block;width: 80%" class="form-control" type="text" placeholder="Buscar" aria-label="Search">
+                        <a href="" onclick="duda(event)" ><i class="far fa-question-circle"></i></a>
+                    </div>
+                    <div id="dataConsulta" class="row justify-content-center" style="margin-top: 3%">
                         @foreach($dataProducto as $data)
                             <div class="card col-sm-3" style="width: 18rem;padding: 10px;margin-right:6%; margin-bottom: 5%;box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.75)">
                                 <img class="card-img-top" src="{{asset('storage/' . $data->id . '/' . $data->ruta )}}" alt="Card image cap" >
@@ -119,7 +124,21 @@
                                 <div id="mayor" class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
                                     <img src="{{asset('img/logo.jpeg')}}" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text">Lo sentimos no contamos con marcas de esa Categoria...</p>
+                                        <p class="card-text">Lo sentimos no contamos con ropa en esta seccion...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                @else
+                    <div class="row-cols-sm-1" >
+                        <div class="container">
+                            <div class="row justify-content-center h-100">
+                                <div id="mayor" class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
+                                    <img src="{{asset('img/logo.jpeg')}}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Bienvenido...</p>
                                     </div>
                                 </div>
                             </div>
@@ -147,8 +166,10 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{{asset('assets/js/main.js')}}"></script>
+
 
 
 

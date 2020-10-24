@@ -189,7 +189,7 @@ function tomarId(id){
                 tasks.forEach(ta => {
                     template += `<div class="col-lg-4 col-md-6" style="margin-top: 2%">
                         <div class="card" style="width: 18rem;padding: 10px">
-                          <img class="card-img-top" src="storage/${ta.id}/${ta.ruta}" alt="Card image cap" height="40%">
+                          <img src="storage/${ta.id}/${ta.ruta}"  class="img-fluid" alt="Responsive image" height="40%">
                           <div class="card-body">
                             <p class="card-text">${ta.nombre}</p>
                              <a style="color:white" onclick="verProducto('storage/${ta.id}/${ta.ruta}', '${ta.descripcion}', '${ta.valor}' )"  class="btn btn-primary">Ver</a>
@@ -225,6 +225,49 @@ function advertencia(){
         showConfirmButton: false,
         timer: 800
     })
+}
+
+function duda(e){
+    e.preventDefault();
+    Swal.fire('La busqueda se realiza en todo los productos')
+}
+
+
+function capturar() {
+    let busca = $('#buscador').val();
+    if ($('#buscador').val() != "") {
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/producto/buscar',
+            data: { search:busca },
+            type: 'POST',
+            beforeSend : function(){
+
+            },
+            success:function(response) {
+                if(response!=0){
+                    let tasks = JSON.parse(response);
+                    let template = '';
+                    tasks.forEach(ta => {
+                        template += `
+                            <div class="card col-sm-3" style="width: 18rem;padding: 10px;margin-right:6%; margin-bottom: 5%;box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.75)">
+                                <img class="card-img-top" src="../../../storage/${ta.id}/${ta.ruta}" alt="Card image cap" >
+                                <div class="card-body">
+                                    <p class="card-text">${ta.nombre}</p>
+                                    <a id="categoria" style="color:white" onclick="verProducto('../../../storage/${ta.id}/${ta.ruta}', '${ta.descripcion}', '${ta.valor}' )" class="btn btn-primary">Ver</a>
+                                </div>
+                            </div>`
+                    });
+                    $('#dataConsulta').html(template);
+                }else{
+
+                }
+
+            }
+        });
+    }
 }
 
 

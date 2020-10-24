@@ -40,3 +40,4 @@ Route::post('/producto/vieweditar/{id}', 'ProductoController@viewEditProducto')-
 Route::post('/producto/editar', 'ProductoController@editProducto')->name('productoEditar');
 Route::post('/producto/filtro', 'WelcomeController@listProducto')->name('welcome');
 Route::post('/producto/total/{idC}/{idM}', 'WelcomeController@listProductoOrden')->name('welcomeTotalA');
+Route::post('/producto/buscar', 'WelcomeController@buscarProducto')->name('welcomeBuscar');

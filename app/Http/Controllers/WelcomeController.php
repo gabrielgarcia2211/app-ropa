@@ -23,8 +23,6 @@ class WelcomeController extends Controller
         }else{
             $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
         }
-
-
         if($dataProducto!=""){
             foreach ($dataProducto as $est) {
                 $json[] = array(
@@ -64,6 +62,31 @@ class WelcomeController extends Controller
         }
         return view('dashboard.index')->with(compact('dataProducto','dataCategorias','dataMarcas'));;
 
+
+    }
+
+    function buscarProducto(Request $request){
+        $dato = $request->input('search');
+
+        try {
+            $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
+
+            foreach ($producto as $est) {
+                $json[] = array(
+                    'id' => $est['id'],
+                    'ruta' => $est['ruta'],
+                    'descripcion' => $est['descripcioncorta'],
+                    'valor' => $est['valor'],
+                    'nombre' => $est['nombre'],
+                );
+            }
+            $JString = json_encode($json);
+            echo $JString;
+
+        } catch (\Exception $e) {
+
+            echo 0;
+        }
 
     }
 }
