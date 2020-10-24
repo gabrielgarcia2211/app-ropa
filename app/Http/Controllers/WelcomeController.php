@@ -41,6 +41,28 @@ class WelcomeController extends Controller
             echo 0;
         }
 
+    }
+
+    public function viewlistProductoOrden(){
+        $dataCategorias  = DB::select('SELECT descripcion ,estado, id FROM categorias ');
+        $dataMarcas  = DB::select('SELECT descripcion ,nombre, id FROM marcas ');
+        return view('dashboard.index')->with(compact('dataCategorias','dataMarcas'));;
+    }
+
+    public function listProductoOrden($idC, $idM){
+        $dataCategorias  = DB::select('SELECT descripcion ,estado, id FROM categorias ');
+        $dataMarcas  = DB::select('SELECT descripcion ,nombre, id FROM marcas ');
+        if($idM=='no'){
+            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')
+                ->where('productos.categoria_id', '=', $idC)
+                ->get();
+
+        }else{
+            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->join('marcas', 'marcas.id', '=', 'productos.marca_id')
+                ->where('productos.categoria_id', '=', $idC)->where('productos.marca_id', '=', $idM)
+                ->get();
+        }
+        return view('dashboard.index')->with(compact('dataProducto','dataCategorias','dataMarcas'));;
 
 
     }

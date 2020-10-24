@@ -19,12 +19,12 @@ class ProductoController extends Controller
     public function viewProducto(){
         $data  = DB::select('SELECT descripcion ,estado, id FROM categorias ');
         $dataM  = DB::select('SELECT descripcion ,nombre, id FROM marcas ');
-        return view('productos')->with(compact('data', 'dataM'));
+        return view('admin.productos')->with(compact('data', 'dataM'));
     }
 
     public function viewProductoLista(){
         $data  = DB::select('SELECT * FROM productos ');
-        return view('lista')->with(compact('data'));
+        return view('admin.lista')->with(compact('data'));
     }
 
 
@@ -73,7 +73,7 @@ class ProductoController extends Controller
         $data  = DB::select('SELECT descripcion ,estado, id FROM categorias ');
         $dataM  = DB::select('SELECT descripcion ,nombre, id FROM marcas ');
         $request->session()->put('key', $id);
-        return view('editar')->with(compact('producto', 'data', 'dataM'));
+        return view('admin.editar')->with(compact('producto', 'data', 'dataM'));
     }
 
     public function editProducto(Request $request){
@@ -95,10 +95,12 @@ class ProductoController extends Controller
             $producto->save();
             Alert::success('Producto editado', 'Satisfactoriamente');
             $request->session()->forget('key');
-            return redirect('home');
+            return redirect('admin.home');
         }
 
     }
+
+
 
 
 

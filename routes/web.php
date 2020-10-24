@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/', 'WelcomeController@index')->name('welcomeI');
 
 Auth::routes();
 
@@ -27,6 +27,7 @@ Route::get('/producto/lista', 'ProductoController@viewProductoLista')->name('pro
 Route::get('/categoria/agregar', 'CategoriaController@viewCategoria')->name('categoria');
 Route::get('/marca/agregar', 'MarcaController@viewMarca')->name('marca');
 Route::get('/empresa/agregar', 'EmpresaController@viewEmpresa')->name('empresa');
+Route::get('/producto/total', 'WelcomeController@viewlistProductoOrden')->name('welcomeTotal');
 
 
 Route::post('/correo', 'MailController@getMail')->name('email');
@@ -38,4 +39,4 @@ Route::post('/producto/eliminar', 'ProductoController@deleteProducto')->name('pr
 Route::post('/producto/vieweditar/{id}', 'ProductoController@viewEditProducto')->name('productoviewEditar');
 Route::post('/producto/editar', 'ProductoController@editProducto')->name('productoEditar');
 Route::post('/producto/filtro', 'WelcomeController@listProducto')->name('welcome');
-//Route::post('/cargaEstudiante', 'DirectorController@guardarEstudiante')->name('admin.carga');
+Route::post('/producto/total/{idC}/{idM}', 'WelcomeController@listProductoOrden')->name('welcomeTotalA');

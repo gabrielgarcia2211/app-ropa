@@ -189,7 +189,7 @@ function tomarId(id){
                 tasks.forEach(ta => {
                     template += `<div class="col-lg-4 col-md-6" style="margin-top: 2%">
                         <div class="card" style="width: 18rem;padding: 10px">
-                          <img class="card-img-top" src="storage/${ta.id}/${ta.ruta}" alt="Card image cap">
+                          <img class="card-img-top" src="storage/${ta.id}/${ta.ruta}" alt="Card image cap" height="40%">
                           <div class="card-body">
                             <p class="card-text">${ta.nombre}</p>
                              <a style="color:white" onclick="verProducto('storage/${ta.id}/${ta.ruta}', '${ta.descripcion}', '${ta.valor}' )"  class="btn btn-primary">Ver</a>

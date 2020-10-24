@@ -14,7 +14,7 @@ class CategoriaController extends Controller
     }
 
     public function viewCategoria(){
-        return view('categoria');
+        return view('admin.categoria');
     }
 
     public function addCategoria(Request $request){

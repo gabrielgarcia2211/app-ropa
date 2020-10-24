@@ -42,7 +42,7 @@
                 <h1 class="logo mr-auto"><a href="">koko.swimwear <img src="img/logo.jpeg" alt=""></a></h1>
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="{{ route('welcome') }}">Home</a></li>
+                        <li class="active"><a href="{{ route('welcomeI') }}">Home</a></li>
                         <li><a href="{{ route('login') }}">Inicio Sesion</a></li>
                         <li><a href="#about">Quienes Somos</a></li>
                         <li><a href="#services">Producto</a></li>
@@ -194,6 +194,7 @@
 
             <div id="data" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             </div>
+            <span style="padding: 10px;margin-top: 2%"class="badge badge-dark"><a style="padding: 15px;color:white"href="{{route('welcomeTotal')}}">Ver mas...</a></span>
         </div>
 
 

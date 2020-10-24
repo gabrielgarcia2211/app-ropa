@@ -13,7 +13,7 @@ class MarcaController extends Controller
     }
 
     public function viewMarca(){
-        return view('marca');
+        return view('admin.marca');
     }
 
     public function addMarca(Request $request){

@@ -16,7 +16,7 @@ class EmpresaController extends Controller
 
     public function viewEmpresa(){
         $dataEmpresa  = DB::select('SELECT * FROM users');
-        return view('informacion')->with(compact('dataEmpresa'));
+        return view('admin.informacion')->with(compact('dataEmpresa'));
     }
 
     public function updateEmpresa(Request $request){
