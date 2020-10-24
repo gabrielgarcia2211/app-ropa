@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="valor">Valor</label>
-                <input type="number" class="form-control" id="valor" name="valor" required>
+                <input type="number" class="form-control" id="valor" name="precio" required>
             </div>
             <div class="form-group">
                 <label for="palabra">Palabra Clave</label>

@@ -126,7 +126,9 @@
 
             <header class="section-header">
                 <h3>Quienes Somos</h3>
+                @if(!empty($dataEmpresa))
                 <p style="text-align: center">{{$dataEmpresa[0]->quienessomos}}</p>
+                    @endif
             </header>
         </div>
     </section><!-- End About Us Section -->
@@ -191,9 +193,6 @@
             </div>
 
             <div id="data" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-               <div class="row">
-
-               </div>
             </div>
         </div>
 
@@ -302,6 +301,7 @@ box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);">
 <!-- Vendor JS Files -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>

@@ -19,9 +19,9 @@ class WelcomeController extends Controller
 
         $dato = $request->input('search');
         if($dato=='no'){
-            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->get();
+            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->get();//simplePaginate(1);
         }else{
-            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
+            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
         }
 
 
@@ -30,6 +30,8 @@ class WelcomeController extends Controller
                 $json[] = array(
                     'id' => $est['id'],
                     'ruta' => $est['ruta'],
+                    'nombre' => $est['nombre'],
+                    'valor' => $est['valor'],
                     'descripcion' => $est['descripcioncorta'],
                 );
             }

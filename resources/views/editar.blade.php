@@ -89,7 +89,7 @@
                         </div>
                         <div class="form-group">
                             <label for="valor">Valor</label>
-                            <input type="number" class="form-control" id="valor" name="valor" value="{{ !empty($producto) ? $producto->valor : old('valor') }}"required>
+                            <input type="numer" class="form-control" id="valor" name="precio" value="{{ !empty($producto) ? $producto->valor : old('valor') }}"required>
                         </div>
                         <div class="form-group">
                             <label for="palabra">Palabra Clave</label>
@@ -97,11 +97,11 @@
                         </div>
                         <div class="form-group">
                             <label for="estado">Estado</label>
-                            <input type="text" class="form-control" id="estado" name="estado" value="{{ !empty($producto) ? $producto->estado : old('estado') }}"required >
+                            <input type="text" class="form-control" id="estado" name="estado"  required>
                         </div>
                         <div class="form-group">
                             <label for="estado">Imagen</label>
-                            <input id="file-input" name="imagen" type="file" required>
+                            <input id="file-input" name="imagen" type="file" value="{{ !empty($producto) ? $producto->ruta : old('imagen') }}" required>
                         </div>
 
                         <div class="form-group">

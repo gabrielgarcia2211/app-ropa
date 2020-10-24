@@ -24,7 +24,7 @@
                     <td style="padding: 10px">{{$tipo->estado}}</td>
                     <td><form action="{{  route('productoviewEditar', [$tipo->id]) }}" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-primary">Editar</button>
+                        <button onclick="advertencia()" type="submit" class="btn btn-primary">Editar</button>
                     </form></td>
                     <td><button onclick="eliminar({{$tipo->id}})" id="eliminar"  type="button" class="btn btn-danger">Eliminar</button></td>
                 </tr>
@@ -33,6 +33,7 @@
 
         </tbody>
     </table>
+
 
 
 

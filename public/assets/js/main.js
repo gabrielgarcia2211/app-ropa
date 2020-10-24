@@ -187,15 +187,14 @@ function tomarId(id){
                 let tasks = JSON.parse(response);
                 let template = '';
                 tasks.forEach(ta => {
-                    template += `<div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="">
-                        <div class="card" style="width: 18rem;">
+                    template += `<div class="col-lg-4 col-md-6" style="margin-top: 2%">
+                        <div class="card" style="width: 18rem;padding: 10px">
                           <img class="card-img-top" src="storage/${ta.id}/${ta.ruta}" alt="Card image cap">
                           <div class="card-body">
-                            <p class="card-text">${ta.descripcion}</p>
+                            <p class="card-text">${ta.nombre}</p>
+                             <a style="color:white" onclick="verProducto('storage/${ta.id}/${ta.ruta}', '${ta.descripcion}', '${ta.valor}' )"  class="btn btn-primary">Ver</a>
                           </div>
                         </div>
-                    </div>
                 </div>`
                 });
                 $('#data').html(template);
@@ -206,11 +205,27 @@ function tomarId(id){
             $("#carga").hide();
         }
     });
-
-
 }
 
+function verProducto(ruta, descrip, precio){
+    Swal.fire({
+        imageUrl: ruta,
+        imageHeight: 400,
+        imageAlt: 'A tall image',
+        title: 'Solo por: $' + precio,
+        text: descrip,
+    })
+}
 
+function advertencia(){
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Recuerda la imagen',
+        showConfirmButton: false,
+        timer: 800
+    })
+}
 
 
 

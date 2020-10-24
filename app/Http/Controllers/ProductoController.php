@@ -47,7 +47,7 @@ class ProductoController extends Controller
             $producto->nombre = $request->input('nombre');
             $producto->descripcioncorta = $request->input('descripcion');
             $producto->detalle = $request->input('detalle');
-            $producto->valor = $request->input('valor');
+            $producto->valor = $request->input('precio');
             $producto->palabraclave = $request->input('palabra');
             $producto->estado = $request->input('estado');
             $producto->categoria_id = $request->input('valor');
@@ -86,7 +86,7 @@ class ProductoController extends Controller
             $producto->nombre = $request->input('nombre');
             $producto->descripcioncorta = $request->input('descripcion');
             $producto->detalle = $request->input('detalle');
-            $producto->valor = $request->input('valor');
+            $producto->valor = $request->input('precio');
             $producto->palabraclave = $request->input('palabra');
             $producto->estado = $request->input('estado');
             $producto->categoria_id = $request->input('valor');
