@@ -95,7 +95,7 @@ class ProductoController extends Controller
             $producto->save();
             Alert::success('Producto editado', 'Satisfactoriamente');
             $request->session()->forget('key');
-            return redirect('admin.home');
+            return redirect('home');
         }
 
     }

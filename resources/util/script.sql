@@ -59,9 +59,9 @@ CREATE TABLE IF NOT EXISTS `marcas` (
 -- Volcando datos para la tabla ropa.marcas: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `marcas` DISABLE KEYS */;
 INSERT INTO `marcas` (`id`, `nombre`, `descripcion`) VALUES
-	(0, 'la unica', 'sencilla'),
+	(0, 'fifa', 'sencilla'),
 	(1, 'adidas', 'calidad en marcha'),
-	(2, 't', 't');
+	(2, 'nike', 'calidad y comodidad');
 /*!40000 ALTER TABLE `marcas` ENABLE KEYS */;
 
 -- Volcando estructura para tabla ropa.migrations
@@ -120,10 +120,10 @@ CREATE TABLE IF NOT EXISTS `productos` (
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
 INSERT INTO `productos` (`id`, `referencia`, `nombre`, `descripcioncorta`, `detalle`, `valor`, `palabraclave`, `estado`, `categoria_id`, `marca_id`, `ruta`) VALUES
 	(1, '909', 'ropa deportiva', 'comoda y elegante', 'unico', 3, 'clasico', 'pre venta', 3, 0, 'women.jpg'),
-	(3, '212', 'ropa interior', 'sencilla y sexy', 'unico', 212, 'no', 'personal', 2, 0, 'uno.jpg'),
-	(4, '2333', 'simple', 'comoda y simple', 'ninguno', 100, 'nuevo', 'actual', 2, 0, 'uno.jpg'),
+	(3, '212', 'ropa interior', 'sencilla y sexy', 'unico', 212, 'no', 'personal', 3, 0, 'uno.jpg'),
+	(4, '2333', 'simple', 'comoda y simple', 'ninguno', 100, 'nuevo', 'actual', 3, 2, 'uno.jpg'),
 	(5, '6661', 'son goku', 'unico y valiente', 'ninguno', 2, 'mi', 'nuevo', 2, 0, 'logo.jpeg'),
-	(6, '89901', 'Enterizo clasico', 'comodo y simple', 'nueva linea', 2000, 'sexy', 'nuevo', 3, 0, 'índice.jpg');
+	(6, '89901', 'Enterizo clasico', 'comodo y simple', 'nueva linea', 2000, 'sexy', 'nuevo', 3, 1, 'índice.jpg');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla ropa.rols
@@ -164,10 +164,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `users_rol_foreign` FOREIGN KEY (`rol`) REFERENCES `rols` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla ropa.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla ropa.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `quienessomos`, `direccion`, `telefono`, `email`, `email_verified_at`, `password`, `username`, `facebook`, `twitter`, `instagram`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'Viviane Powlowski', 'Somos una empresa creada para complacer a nuestro cliente, ofrecer \r\n                diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el \r\n                tipo de panty que desees .', NULL, NULL, 'dixie63@example.org', '2020-10-17 20:37:34', '$2y$10$isUUiiBfcueJlINBLYeEJ.97rGxlBKxIvCBw7xiEpGpXilzgt.5/6', 'gabo12', NULL, NULL, NULL, NULL, 'U6coj3gASimST6LfaF2Lc5VXR1O8ulboRnXqF6vUN0Ss49DZ5uvrMFr1WDHX', '2020-10-17 20:37:34', '2020-10-23 15:44:29');
+	(1, 'Viviane Powlowski', 'Somos una empresa creada para complacer a nuestro cliente, ofrecer \r\n                diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el \r\n                tipo de panty que desees .', NULL, NULL, 'dixie63@example.org', '2020-10-17 20:37:34', '$2y$10$isUUiiBfcueJlINBLYeEJ.97rGxlBKxIvCBw7xiEpGpXilzgt.5/6', 'gabo12', NULL, NULL, NULL, NULL, 'kw2wMW2LiATldaDoQbGYmEW4zrbrtLGhdaYS3KPNJfftCMttBFDLjqZPgP3e', '2020-10-17 20:37:34', '2020-10-23 15:44:29');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

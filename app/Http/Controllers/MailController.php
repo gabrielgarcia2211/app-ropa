@@ -13,9 +13,9 @@ class MailController extends Controller
     {
         $data = ['name' => $request->input('name'),
             'asunto' => $request->input('subject'),
-            'message' => $request->input('message')
+            'messag' => $request->input('message')
             ];
-        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new TestMail($data));
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new TestMail($data));//aca se cambie por el remitente
         Alert::success('Correo enviado', 'koko.swimear');
         return back();
     }

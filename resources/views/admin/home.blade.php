@@ -69,7 +69,7 @@
 @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
 
-        <div  class="container-fluid" style="margin-top: 8%">
+        <div  class="container-fluid" style="margin-top: 8%;margin-bottom: 10%">
             <div class="row">
                 <div id="principal" class="col-sm" style="margin-left: 8%">
                     <div class="card" style="width: 30rem;">
@@ -104,7 +104,7 @@
                     </div>
 
                 </div>
-                    <div class="col-sm">
+                    <div class="col-sm" style="margin-bottom: 50%">
                         <div class="container">
                             <div id="contenedor">
                                 <div id="mayor" class="card" style="width: 22rem; -webkit-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.75);">
@@ -119,15 +119,7 @@
             </div>
         </div>
 
-<!-- Footer -->
-<footer style="background-color: black; bottom: 0px ; position: fixed; width: 100%"bclass="page-footer font-small blue row">
-    <!-- Copyright -->
-    <div style="color:white"class="footer-copyright text-center py-3">
-        &copy; Copyright <strong>koko.swimwear</strong>. All Rights Reserved
-    </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

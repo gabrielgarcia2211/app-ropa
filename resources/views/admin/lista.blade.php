@@ -1,5 +1,5 @@
 
-    <table class="table table-responsive-xl" style=" position:absolute; left:-18%; padding: 8px;background: #ffffff;box-shadow: 10px 3px 31px -5px rgba(0,0,0,0.75);" >
+    <table class="table" style="position:absolute; left:-18%; padding: 8px;background: #ffffff;box-shadow: 10px 3px 31px -5px rgba(0,0,0,0.75);margin-bottom: 50%" >
         <thead class="bg-warning">
         <tr class="something">
             <th style="padding: 10px;" scope="col">Referencia</th>

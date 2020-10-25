@@ -194,7 +194,7 @@
 
             <div id="data" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             </div>
-            <span style="padding: 10px;margin-top: 2%"class="badge badge-dark"><a style="padding: 15px;color:white"href="{{route('welcomeTotal')}}">Ver mas...</a></span>
+            <span style="padding: 10px;margin-top: 2%"class="badge badge-dark"><a style="padding: 15px;color:white"href="{{route('welcomeTotal')}}">Ver Todo el catalogo...</a></span>
         </div>
 
 
