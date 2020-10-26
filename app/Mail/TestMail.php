@@ -29,7 +29,7 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->from('garciaquinteroga@gmail.com','gabo')
+        return $this->from(env('MAIL_FROM_ADDRESS'),env('MAIL_FROM_NAME'))
         ->view('testMail')->subject('Peticion del cliente')->with($this->data);
     }
 }
