@@ -109,10 +109,10 @@
                     <div id="dataConsulta" class="row justify-content-center" style="margin-top: 3%">
                         @foreach($dataProducto as $data)
                             <div class="card col-sm-3" style="width: 18rem;padding: 10px;margin-right:6%; margin-bottom: 5%;box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.75)">
-                                <img class="card-img-top" src="{{asset('storage/' . $data->id . '/' . $data->ruta )}}" alt="Card image cap" >
+                                <img class="card-img-top" src="{{asset('contenedor/' . $data->id . '/' . $data->ruta )}}" alt="Card image cap" >
                                 <div class="card-body">
                                     <p class="card-text">{{$data->nombre}}</p>
-                                    <a id="categoria" style="color:white" onclick="verProducto('{{asset('storage/' . $data->id . '/' . $data->ruta )}}', '{{$data->descripcion}}', '{{$data->valor}}' )" class="btn btn-primary">Ver</a>
+                                    <a id="categoria" style="color:white" onclick="verProducto('{{asset('contenedor/' . $data->id . '/' . $data->ruta )}}', '{{$data->descripcion}}', '{{$data->valor}}' )" class="btn btn-primary">Ver</a>
                                 </div>
                             </div>
                         @endforeach

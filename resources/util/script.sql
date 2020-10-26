@@ -15,10 +15,7 @@
 -- Volcando estructura de base de datos para ropa
 CREATE DATABASE IF NOT EXISTS `ropa` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `ropa`;
-ULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+
 -- Volcando estructura para tabla ropa.categorias
 CREATE TABLE IF NOT EXISTS `categorias` (
   `id` int(11) NOT NULL,
@@ -74,7 +71,10 @@ INSERT INTO `marcas` (`id`, `nombre`, `descripcion`) VALUES
 
 -- Volcando estructura para tabla ropa.migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
-  `id` int(10) unsigned NOT N
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Volcando datos para la tabla ropa.migrations: ~7 rows (aproximadamente)
@@ -119,13 +119,12 @@ CREATE TABLE IF NOT EXISTS `productos` (
   KEY `productos_marca_id_foreign` (`marca_id`),
   CONSTRAINT `productos_categoria_id_foreign` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
   CONSTRAINT `productos_marca_id_foreign` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Volcando datos para la tabla ropa.productos: ~31 rows (aproximadamente)
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
 INSERT INTO `productos` (`id`, `referencia`, `nombre`, `descripcioncorta`, `detalle`, `valor`, `palabraclave`, `estado`, `categoria_id`, `marca_id`, `ruta`) VALUES
-	(7, '111', 'Mar', 'libre', 'unico', 65000, 'libre', 'actual', 0, 3, 'mar.PNG'),
-	(8, '201', 'Nude', 'Calido', 'ninguno', 45000, 'libre', 'actual', 1, 3, 'piel.PNG'),
+	(8, '201', 'Nude', 'Calido', 'ninguno', 45000, 'libre', 'ff', 4, 0, 'goku.jpg'),
 	(9, '112', 'Red flowers', 'sencillo y cómodo', 'unico', 45000, 'cómodo', 'Colección', 0, 1, 'azul claro.PNG'),
 	(10, '113', 'White sheets', 'Mar', 'ninguno', 55000, 'sensual', 'actual', 0, 2, 'azul delta.PNG'),
 	(11, '114', 'Exotic', 'sensual', 'unico', 45000, 'libre', 'actual', 0, 3, 'exotico.PNG'),
@@ -149,12 +148,7 @@ INSERT INTO `productos` (`id`, `referencia`, `nombre`, `descripcioncorta`, `deta
 	(29, '402', 'Conjunto de Pareja Ancla', 'Pareja', 'unico', 145000, 'simple', 'Colección', 3, 3, 'ancla.PNG'),
 	(30, '403', 'Conjunto de Pareja Hojas Azules', 'Parejas', 'ninguno', 145000, 'primavera', 'Colección', 3, 2, 'calido.PNG'),
 	(31, '404', 'Conjunto de Pareja Estrellas de Mar', 'Mar', 'unico', 150000, 'cómodo', 'Colección', 3, 3, 'estrellas mar.PNG'),
-	(32, '405', 'Conjunto de Pareja Kiwi', 'Parejas', 'Primavera', 150000, 'primavera', 'Colección', 3, 3, 'kiwi.PNG'),
-	(33, '501', 'Estilo Basico', 'Personalizado', 'Primavera', 45000, 'basico', 'actual', 4, 6, 'estilos.PNG'),
-	(34, '502', 'Sombrero Parejas', 'Personalizado', 'ninguno', 80000, 'primavera', 'Colección', 4, 6, 'love blaco.PNG'),
-	(35, '503', 'Sombrero con Nombre', 'Estilo Personalizado', 'Primavera', 60000, 'primavera', 'Colección', 4, 6, 'love.PNG'),
-	(36, '504', 'Sombrero con Nombre', 'Estilo Personalizado', 'Primavera', 60000, 'primavera', 'Colección', 4, 6, 'nomb.PNG'),
-	(37, '505', 'Sombrero Básico con Nombre', 'Estilo Personalizado', 'unico', 55000, 'primavera', 'Colección', 4, 6, 'pavas per.PNG');
+	(32, '405', 'Conjunto de Pareja Kiwi', 'Parejas', 'Primavera', 150000, 'primavera', 'Colección', 3, 3, 'kiwi.PNG');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla ropa.rols
@@ -198,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcando datos para la tabla ropa.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `quienessomos`, `direccion`, `telefono`, `email`, `email_verified_at`, `password`, `username`, `facebook`, `twitter`, `instagram`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'Camila Arevalo', 'Somos una empresa creada para complacer a nuestro cliente, ofrecer diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el tipo de panty que desees .', NULL, NULL, 'dixie63@example.org', '2020-10-17 20:37:34', '$2y$10$isUUiiBfcueJlINBLYeEJ.97rGxlBKxIvCBw7xiEpGpXilzgt.5/6', 'gabo12', NULL, NULL, NULL, NULL, '5vXA3MbiyfxSQlOvSIV5XaggyT0RdV6ewSf2316H6DqIPNY5JUa9w2isEkrB', '2020-10-17 20:37:34', '2020-10-24 19:58:35');
+	(1, 'Camila Arevalo', 'Somos una empresa creada para complacer a nuestro cliente, ofrecer diferentes tipos de traje de baño respecto al diseño de tu preferencia, puedes escoger el tipo de panty que desees .', NULL, NULL, 'dixie63@example.org', '2020-10-17 20:37:34', '$2y$10$isUUiiBfcueJlINBLYeEJ.97rGxlBKxIvCBw7xiEpGpXilzgt.5/6', 'gabo12', NULL, NULL, NULL, NULL, 'lmW8Bmrjai0L7gPoWhe7qezvtANmt3dWn48Wt3eMZj1X4T6jMQUTtmSgesbE', '2020-10-17 20:37:34', '2020-10-24 19:58:35');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
