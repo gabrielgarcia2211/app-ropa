@@ -11,40 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7067952-03f7-4107-b5c1-6908f6e46ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/contenedor/10/azul delta.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/11/exotico.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/12/hawaiano.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/13/hojas negras.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/14/mar morado.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/15/mar.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/16/margaritas.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/17/sensual.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/18/azul.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/19/flores verdes.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/20/flroes.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/21/negro dos.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/22/cerdito.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/23/elmo.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/24/gatitos.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/25/muchis.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/26/pikachu.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/27/stich.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/28/aguacate.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/29/ancla.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/30/calido.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/31/estrellas mar.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/32/kiwi.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/8/goku.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contenedor/9/azul claro.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ropa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ropa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/util/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/util/script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/testMail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testMail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,6 +211,7 @@
       <workItem from="1603726730746" duration="911000" />
       <workItem from="1603729380437" duration="4942000" />
       <workItem from="1603735997934" duration="7325000" />
+      <workItem from="1603751087741" duration="273000" />
     </task>
     <servers />
   </component>
