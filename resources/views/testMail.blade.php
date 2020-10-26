@@ -76,15 +76,10 @@
         -webkit-box-shadow: 3px 1px 48px 5px rgba(0,0,0,0.75);-moz-box-shadow: 3px 1px 48px 5px rgba(0,0,0,0.75);
         box-shadow: 3px 1px 48px 5px rgba(0,0,0,0.75);border-radius: 17px 17px 0px 0px;
         -moz-border-radius: 17px 17px 0px 0px;-webkit-border-radius: 17px 17px 0px 0px; border: 0px solid #000000;" class="link">
-        <a target="_blank" href="https://www.facebook.com/IngSistemasUFPS/"><img style=" width: 55px;
-                margin: 10px;"class="uno"
-                                                                                 src="https://i.ya-webdesign.com/images/logos-redes-sociales-png-facebook-4.png" alt=""></a>
-        <a target="_blank" href="https://www.youtube.com/channel/UCajtSLUyfzX0DumlXceV8NA"><img style=" width: 55px;
-                margin: 10px;"class="dos"
-                                                                                                src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png" alt=""></a>
-        <a target="_blank" href="https://www.instagram.com/ufpscucuta/"><img style=" width: 55px;
-                 margin: 10px; " class="tres"
-                                                                             src="https://i.pinimg.com/originals/79/7a/fe/797afe1351677d0ad8787224e6a5be2a.png" alt=""></a>
+        <a target="_blank" href=""><img style=" width: 55px;margin: 10px;"class="uno" src="https://i.ya-webdesign.com/images/logos-redes-sociales-png-facebook-4.png" alt=""></a>
+        <a target="_blank" href=""><img style=" width: 55px;margin: 10px;"class="dos" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png" alt=""></a>
+        <a target="_blank" href="https://www.instagram.com/koko.swimwear/?hl=es-la"><img style=" width: 55px;
+                 margin: 10px; " class="tres" src="https://i.pinimg.com/originals/79/7a/fe/797afe1351677d0ad8787224e6a5be2a.png" alt=""></a>
     </div>
 
 </div>

@@ -267,6 +267,10 @@ box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);">
         </div>
     </section><!-- End Contact Section -->
 
+    <section>
+
+    </section>
+
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
@@ -284,7 +288,7 @@ box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);">
                     <h6 style="display: inline-block;margin-right: 10%">Redes Sociales:</h6>
                     <a style="margin-right: 10%"href="#" class="twitter"><i class="fa fa-twitter fa-lg"></i></a>
                     <a style="margin-right: 10%"href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a style="margin-right: 10%"href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a style="margin-right: 10%"href="https://www.instagram.com/koko.swimwear/?hl=es-la" class="instagram"><i class="fa fa-instagram fa-lg"></i></a>
                     <a style="margin-right: 10%"href="#" class="google-plus"><i class="fa fa-google-plus fa-lg"></i></a>
                     <a style="margin-right: 10%"href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
                 </div>
