@@ -55,13 +55,13 @@
         border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px;-webkit-border-radius: 10px 10px 10px 10px;border: 0px solid #000000;
         -webkit-box-shadow: 3px -2px 21px 8px rgba(0,0,0,0.75);-moz-box-shadow: 3px -2px 21px 8px rgba(0,0,0,0.75); box-shadow: 3px -2px 21px 8px rgba(0,0,0,0.75);" class="mitad">
         <p style=" margin: 20px;font-size: 0.9rem">
-            {{$messag}}
+           
         </p>
         <br>
         <br>
         <p style=" text-align: right;
             font-family: 'Times New Roman', Times, serif;text-transform: uppercase;
-            color:#000000;font-size: 0.7em" class="pie" contenteditable="false"> {{$asunto}}</p>
+            color:#000000;font-size: 0.7em" class="pie" contenteditable="false"></p>
     </div>
 
 
