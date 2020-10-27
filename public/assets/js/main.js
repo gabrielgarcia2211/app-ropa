@@ -253,7 +253,7 @@ function capturar() {
                     tasks.forEach(ta => {
                         template += `
                             <div class="card col-sm-3" style="width: 18rem;padding: 10px;margin-right:6%; margin-bottom: 5%;box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.75)">
-                                <img class="card-img-top" src="../../../contenedor/${ta.id}/${ta.ruta}" alt="Card image cap" >
+                                <img class="card-img-top" src="contenedor/${ta.id}/${ta.ruta}" alt="Card image cap" >
                                 <div class="card-body">
                                     <p class="card-text">${ta.nombre}</p>
                                     <a id="categoria" style="color:white" onclick="verProducto('../../../contenedor/${ta.id}/${ta.ruta}', '${ta.descripcion}', '${ta.valor}' )" class="btn btn-primary">Ver</a>
