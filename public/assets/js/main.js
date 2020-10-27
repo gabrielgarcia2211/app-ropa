@@ -247,8 +247,6 @@ function capturar() {
 
             },
             success:function(response) {
-                alert(response);
-
                 if(response!=0){
                     let tasks = JSON.parse(response);
                     let template = '';
