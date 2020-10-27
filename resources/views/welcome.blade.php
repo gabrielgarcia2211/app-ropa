@@ -39,7 +39,7 @@
 
         <div class="row justify-content-center">
             <div class="col-xl-11 d-flex align-items-center">
-                <h1 class="logo mr-auto"><a href="">koko.swimwear <img src="img/logo.jpeg" alt=""></a></h1>
+                <h1 class="logo mr-auto"><a href="#">koko.swimwear <img src="img/logo.jpeg" alt=""></a></h1>
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
                         <li class="active"><a href="{{ route('welcomeI') }}">Home</a></li>
