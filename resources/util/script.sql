@@ -119,9 +119,9 @@ CREATE TABLE IF NOT EXISTS `productos` (
   KEY `productos_marca_id_foreign` (`marca_id`),
   CONSTRAINT `productos_categoria_id_foreign` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
   CONSTRAINT `productos_marca_id_foreign` FOREIGN KEY (`marca_id`) REFERENCES `marcas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla ropa.productos: ~31 rows (aproximadamente)
+-- Volcando datos para la tabla ropa.productos: ~27 rows (aproximadamente)
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
 INSERT INTO `productos` (`id`, `referencia`, `nombre`, `descripcioncorta`, `detalle`, `valor`, `palabraclave`, `estado`, `categoria_id`, `marca_id`, `ruta`) VALUES
 	(8, '201', 'Nude', 'Calido', 'ninguno', 45000, 'libre', 'ff', 4, 0, 'goku.jpg'),
