@@ -23,7 +23,7 @@ class WelcomeController extends Controller
         }else{
             $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
         }
-        $json[] = null;
+
         if($dataProducto!=""){
             foreach ($dataProducto as $est) {
                 $json[] = array(
@@ -71,7 +71,7 @@ class WelcomeController extends Controller
 
         try {
             $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
-            $json[] = null;
+
             foreach ($producto as $est) {
                 $json[] = array(
                     'id' => $est['id'],
@@ -81,6 +81,7 @@ class WelcomeController extends Controller
                     'nombre' => $est['nombre'],
                 );
             }
+
             $JString = json_encode($json);
             echo $JString;
 
