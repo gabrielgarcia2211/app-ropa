@@ -21,7 +21,7 @@ class WelcomeController extends Controller
         if($dato=='no'){
             $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->paginate(6);
         }else{
-            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->paginate(3);
+            $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
         }
         $json = array();
         if($dataProducto!=""){
