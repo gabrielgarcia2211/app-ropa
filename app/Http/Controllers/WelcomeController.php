@@ -68,7 +68,7 @@ class WelcomeController extends Controller
 
     function buscarProducto(Request $request){
         $dato = $request->input('search');
-
+        $json[] = array();
         try {
             $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
 
