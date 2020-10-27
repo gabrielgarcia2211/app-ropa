@@ -71,7 +71,7 @@ class WelcomeController extends Controller
 
         try {
             $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
-
+            $array[] = null;
             foreach ($producto as $est) {
                 $json[] = array(
                     'id' => $est['id'],
@@ -82,6 +82,7 @@ class WelcomeController extends Controller
                 );
             }
 
+            $array[] = $json;
             $JString = json_encode($json);
             echo $JString;
 
