@@ -70,7 +70,7 @@ class WelcomeController extends Controller
         $dato = $request->input('search');
         try {
             $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
-
+            $json = array();
             foreach ($producto as $est) {
                 $json[] = array(
                     'id' => $est['id'],
