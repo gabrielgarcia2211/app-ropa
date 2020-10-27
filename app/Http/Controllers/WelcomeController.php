@@ -85,7 +85,7 @@ class WelcomeController extends Controller
 
         } catch (\Exception $e) {
 
-            echo 0;
+            echo $e;
         }
 
     }
