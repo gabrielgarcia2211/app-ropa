@@ -23,6 +23,7 @@ class WelcomeController extends Controller
         }else{
             $dataProducto = Producto::select( 'productos.id','productos.ruta','productos.descripcioncorta','productos.nombre','productos.valor')->join('categorias', 'categorias.id', '=', 'productos.categoria_id')->where('categorias.id', '=', $dato)->get();
         }
+        $json[] = null;
         if($dataProducto!=""){
             foreach ($dataProducto as $est) {
                 $json[] = array(
