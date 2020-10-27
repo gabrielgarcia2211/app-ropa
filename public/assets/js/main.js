@@ -235,7 +235,6 @@ function duda(e){
 
 function capturar() {
     let busca = $('#buscador').val();
-    alert(busca);
     if ($('#buscador').val() != "") {
         $.ajax({
             headers: {
@@ -248,6 +247,8 @@ function capturar() {
 
             },
             success:function(response) {
+
+                alert(response);
                 if(response!=0){
                     let tasks = JSON.parse(response);
                     let template = '';
