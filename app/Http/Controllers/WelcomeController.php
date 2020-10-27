@@ -71,7 +71,7 @@ class WelcomeController extends Controller
 
         try {
             $producto = Producto::where('productos.nombre', 'like',  $dato.'%' )->get();
-
+            $json[] = null;
             foreach ($producto as $est) {
                 $json[] = array(
                     'id' => $est['id'],
